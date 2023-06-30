@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticalTwelve", "PracticalTwelve\PracticalTwelve.csproj", "{3A7B0B26-7D98-4317-9BC6-D19120604F29}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticalTwelve.Data", "PracticalTwelve.Data\PracticalTwelve.Data.csproj", "{9636BC80-BC3B-4605-822A-57EEDAA0D400}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3A7B0B26-7D98-4317-9BC6-D19120604F29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A7B0B26-7D98-4317-9BC6-D19120604F29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A7B0B26-7D98-4317-9BC6-D19120604F29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9636BC80-BC3B-4605-822A-57EEDAA0D400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9636BC80-BC3B-4605-822A-57EEDAA0D400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9636BC80-BC3B-4605-822A-57EEDAA0D400}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9636BC80-BC3B-4605-822A-57EEDAA0D400}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
