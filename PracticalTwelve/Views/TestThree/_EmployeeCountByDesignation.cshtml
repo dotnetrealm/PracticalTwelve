@@ -1,0 +1,21 @@
+﻿@using PracticalTwelve.Domain.ViewModels;
+@model IEnumerable<CountOfEmployeeByDesginationId>
+
+<table class="table text-center w-25" id="EmployeeCountByDesignationDataTable">
+    <thead>
+        <tr>
+            <th scope="col"><label asp-for="First().Designation"></label></th>
+            <th scope="col"><label asp-for="First().EmployeeCount"></label></th>
+        </tr>
+    </thead>
+    <tbody class="text-center">
+        @*displays data*@
+        @foreach (var data in Model)
+        {
+            <tr>
+                <th scope="row">@Html.DisplayFor(e => @data.Designation)</th>
+                <td>@Html.DisplayFor(e => @data.EmployeeCount)</td>
+            </tr>
+        }
+    </tbody>
+</table>

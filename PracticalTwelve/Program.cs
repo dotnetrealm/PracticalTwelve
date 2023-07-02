@@ -17,6 +17,7 @@ namespace PracticalTwelve
 
             builder.Services.AddSingleton<ITestOneRepository, TestOneRepository>();
             builder.Services.AddSingleton<ITestTwoRepository, TestTwoRepository>();
+            builder.Services.AddSingleton<ITestThreeRepository, TestThreeRepository>();
 
             var app = builder.Build();
 

@@ -1,0 +1,31 @@
+﻿@using PracticalTwelve.Domain.Entities;
+@{
+    ViewData["Title"] = "Test-03";
+}
+
+@*page heading*@
+<h1 class="display-4 text-center mb-5">Task-03: Employee Management</h1>
+<div id="TestThreeActions" class="row g-2 my-3">
+    <div class="col-auto">
+        <button class="btn btn-primary" id="GetEmployeeCountByDesignationBtn">Get Employee Count By Designation</button>
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-primary" id="GetEmployeeDesignationDetailsBtn">Get Employee Count By Designation</button>
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-primary" id="GetDesignationThatHaveMoreThanOneEmployeeBtn">Get Designations that have more than one employee</button>
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-primary" id="GetEmployeeHavingMaxSalaryBtn">Get Employee having max salary</button>
+    </div>
+</div>
+
+@*user loads here*@
+<div id="DisplaySection"></div>
+
+@*container for toast messages*@
+<div id="ToastDisplay"></div>
+
+@section Scripts{
+    <script src="~/js/test-three-script.js" asp-append-version="true"></script>
+}
