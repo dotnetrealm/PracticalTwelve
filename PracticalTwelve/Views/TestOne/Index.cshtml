@@ -1,8 +1,38 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using PracticalTwelve.Domain.Entities;
+@model IEnumerable<Employee>;
+@{
+    ViewData["Title"] = "Employee management";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@*page heading*@
+<h1 class="display-4 text-center mb-5">Employee Management</h1>
+<div id="EmployeeTableActions" class="row g-2 my-3">
+    <div class="col-auto">
+        <button class="btn btn-secondary" id="InsertSingleRecord">Insert one record</button>
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-secondary col-auto" id="InsertMultipleRecord">Insert more records</button>
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-warning col-auto" id="UpdateFirstNameOfFirstRecord">Update FirstName Of First Record</button>
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-warning col-auto" id="UpdateMiddleNameOfAllRecords">Update all MiddleNames</button>
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-danger col-auto" id="DeleteHavingLessValueThanId">Delete users having id less than 2</button>
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-danger col-auto" id="DeleteAllData">Delete All Employees</button>
+    </div>
 </div>
+
+@*user loads here*@
+<div id="EmployeeData"></div>
+
+@*container for toast messages*@
+<div id="ToastDisplay"></div>
+
+@section Scripts{
+    <script src="~/js/employees-script.js" asp-append-version="true"></script>
+}

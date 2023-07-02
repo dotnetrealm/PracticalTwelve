@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticalTwelve", "PracticalTwelve\PracticalTwelve.csproj", "{3A7B0B26-7D98-4317-9BC6-D19120604F29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticalTwelve", "PracticalTwelve\PracticalTwelve.csproj", "{3A7B0B26-7D98-4317-9BC6-D19120604F29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticalTwelve.Data", "PracticalTwelve.Data\PracticalTwelve.Data.csproj", "{9636BC80-BC3B-4605-822A-57EEDAA0D400}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticalTwelve.Data", "PracticalTwelve.Data\PracticalTwelve.Data.csproj", "{9636BC80-BC3B-4605-822A-57EEDAA0D400}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticalTwelve.Domain", "PracticalTwelve.Domain\PracticalTwelve.Domain.csproj", "{E54BFB7F-D579-452B-A856-BCF6B9540B78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{9636BC80-BC3B-4605-822A-57EEDAA0D400}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9636BC80-BC3B-4605-822A-57EEDAA0D400}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9636BC80-BC3B-4605-822A-57EEDAA0D400}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E54BFB7F-D579-452B-A856-BCF6B9540B78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E54BFB7F-D579-452B-A856-BCF6B9540B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E54BFB7F-D579-452B-A856-BCF6B9540B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E54BFB7F-D579-452B-A856-BCF6B9540B78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

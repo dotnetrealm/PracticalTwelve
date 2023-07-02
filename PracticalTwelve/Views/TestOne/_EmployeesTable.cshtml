@@ -1,0 +1,29 @@
+﻿@using PracticalTwelve.Domain.Entities;
+@model IEnumerable<Employee>
+
+<table class="table text-center" id="EmployeeDataTable">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col"><label asp-for="First().FirstName"></label></th>
+            <th scope="col"><label asp-for="First().MiddleName"></label></th>
+            <th scope="col"><label asp-for="First().LastName"></label></th>
+            <th scope="col"><label asp-for="First().DOB"></label></th>
+            <th scope="col"><label asp-for="First().Address"></label></th>
+        </tr>
+    </thead>
+    <tbody class="text-center">
+        @*displays user data*@
+        @foreach (var employee in Model)
+        {
+            <tr id="@employee.Id">
+                <th scope="row">@Html.DisplayFor(e => @employee.Id)</th>
+                <td>@Html.DisplayFor(e => @employee.FirstName)</td>
+                <td>@Html.DisplayFor(e => @employee.MiddleName)</td>
+                <td>@Html.DisplayFor(e => @employee.LastName)</td>
+                <td>@Html.DisplayFor(e => @employee.DOB)</td>
+                <td>@Html.DisplayFor(e => @employee.Address)</td>
+            </tr>
+        }
+    </tbody>
+</table>

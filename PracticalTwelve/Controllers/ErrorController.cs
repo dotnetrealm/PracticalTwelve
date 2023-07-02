@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using PracticalTwelve.Models;
 using System.Diagnostics;
 
-namespace PracticalEleven.Controllers
+namespace PracticalTwelve.Controllers
 {
     public class ErrorController : Controller
     {
