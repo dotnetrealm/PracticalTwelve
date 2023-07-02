@@ -6,11 +6,11 @@ namespace PracticalTwelve.Controllers
 {
     public class TestOneController : Controller
     {
-        readonly IEmployeeRepository _empolyeeRepository;
+        readonly ITestOneRepository _testOneRepository;
 
-        public TestOneController(IEmployeeRepository empolyeeRepository)
+        public TestOneController(ITestOneRepository testOneRepository)
         {
-            _empolyeeRepository = empolyeeRepository;
+            _testOneRepository = testOneRepository;
         }
 
         /// <summary>
@@ -28,7 +28,7 @@ namespace PracticalTwelve.Controllers
         /// <returns>View</returns>
         public async Task<IActionResult> LoadUsers()
         {
-            IEnumerable<Employee> employees = await _empolyeeRepository.GetAllEmployeeAsync();
+            IEnumerable<Employee> employees = await _testOneRepository.GetAllEmployeeAsync();
             return PartialView("_EmployeesTable", employees);
         }
 
@@ -39,7 +39,7 @@ namespace PracticalTwelve.Controllers
         [HttpGet]
         public async Task<JsonResult> InsertSingleRecord()
         {
-            int count = await _empolyeeRepository.InsertSingleRecordAsync();
+            int count = await _testOneRepository.InsertSingleRecordAsync();
             return Json(new { Result = "OK", Count = count });
         }
 
@@ -56,7 +56,7 @@ namespace PracticalTwelve.Controllers
                 new Employee() { FirstName="Vipul", LastName="Kumar" , DOB=Convert.ToDateTime("05-02-2001").Date, Address="Morbi",  MobileNumber="1231231231"},
                 new Employee() { FirstName="Jay", LastName="Gohel" , DOB=Convert.ToDateTime("06-07-2002").Date, Address="Rajkot",  MobileNumber="1231231231"},
             };
-            int count = await _empolyeeRepository.InsertMultipleRecord(empList);
+            int count = await _testOneRepository.InsertMultipleRecord(empList);
             return Json(new { Result = "OK", Count = count });
         }
 
@@ -67,7 +67,7 @@ namespace PracticalTwelve.Controllers
         [HttpGet]
         public async Task<IActionResult> UpdateFirstNameOfFirstRecord()
         {
-            int count = await _empolyeeRepository.UpdateFirstNameOfFirstRecordAsync("Vipulkumar");
+            int count = await _testOneRepository.UpdateFirstNameOfFirstRecordAsync("Vipulkumar");
             return Json(new { Result = "OK", Count = count });
         }
 
@@ -79,7 +79,7 @@ namespace PracticalTwelve.Controllers
         [HttpGet]
         public async Task<IActionResult> UpdateMiddleNameOfAllRecordsAsync()
         {
-            int count = await _empolyeeRepository.UpdateMiddleNameOfAllRecordsAsync();
+            int count = await _testOneRepository.UpdateMiddleNameOfAllRecordsAsync();
             return Json(new { Result = "OK", Count = count });
         }
 
@@ -91,7 +91,7 @@ namespace PracticalTwelve.Controllers
         [HttpGet]
         public async Task<IActionResult> DeleteHavingLessValueThanId()
         {
-            int count = await _empolyeeRepository.DeleteHavingLessValueThanId(2);
+            int count = await _testOneRepository.DeleteHavingLessValueThanId(2);
             return Json(new { Result = "OK", Count = count });
         }
 
@@ -102,7 +102,7 @@ namespace PracticalTwelve.Controllers
         [HttpGet]
         public async Task DeleteAllData()
         {
-            await _empolyeeRepository.DeleteAllData();
+            await _testOneRepository.DeleteAllData();
         }
     }
 }

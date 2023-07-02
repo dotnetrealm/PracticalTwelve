@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Test-02";
+}
+
+@*page heading*@
+<h1 class="display-4 text-center mb-5">Test-02: Employee Management</h1>
+<div id="EmployeeSalaryTableActions" class="row g-2 my-3">
+    <div class="col-auto">
+        <button class="btn btn-primary" id="GetAllEmployees">Get all employees</button>
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-primary" id="InsertRecords">Insert records</button>
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-primary col-auto" id="GetTotalEmployeesSalary">Get total salary</button>
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-primary col-auto" id="GetEmployeesOlderThanGivenDate">Get employees who born before 2000-01-01</button>
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-primary col-auto" id="GetNullMiddleNameEmployees">Get employees whose MiddleName is null</button>
+    </div>
+</div>
+
+@*user loads here*@
+<div id="DisplaySection" class="my-3"></div>
+
+@*user loads here*@
+<div id="EmployeeSalaryData"></div>
+
+@*container for toast messages*@
+<div id="ToastDisplay"></div>
+
+
+
+@section Scripts{
+    <script src="~/js/test-two-script.js" asp-append-version="true"></script>
+}

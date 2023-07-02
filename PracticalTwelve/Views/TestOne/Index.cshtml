@@ -1,11 +1,10 @@
 ﻿@using PracticalTwelve.Domain.Entities;
-@model IEnumerable<Employee>;
 @{
-    ViewData["Title"] = "Employee management";
+    ViewData["Title"] = "Test-01";
 }
 
 @*page heading*@
-<h1 class="display-4 text-center mb-5">Employee Management</h1>
+<h1 class="display-4 text-center mb-5">Task-01: Employee Management</h1>
 <div id="EmployeeTableActions" class="row g-2 my-3">
     <div class="col-auto">
         <button class="btn btn-secondary" id="InsertSingleRecord">Insert one record</button>
@@ -34,5 +33,5 @@
 <div id="ToastDisplay"></div>
 
 @section Scripts{
-    <script src="~/js/employees-script.js" asp-append-version="true"></script>
+    <script src="~/js/test-one-script.js" asp-append-version="true"></script>
 }

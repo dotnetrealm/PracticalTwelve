@@ -4,14 +4,14 @@ using System.Threading.Tasks;
 
 namespace PracticalTwelve.Data.Interfaces
 {
-    public interface IEmployeeRepository
+    public interface ITestOneRepository
     {
         /// <summary>
         /// Returns all employees
         /// </summary>
         /// <returns></returns>
         Task<IEnumerable<Employee>> GetAllEmployeeAsync();
-        
+
         /// <summary>
         /// Insert new employee
         /// </summary>

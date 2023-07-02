@@ -15,7 +15,8 @@ namespace PracticalTwelve
 
             builder.Services.AddRouting();
 
-            builder.Services.AddSingleton<IEmployeeRepository, EmployeeRepository>();
+            builder.Services.AddSingleton<ITestOneRepository, TestOneRepository>();
+            builder.Services.AddSingleton<ITestTwoRepository, TestTwoRepository>();
 
             var app = builder.Build();
 
