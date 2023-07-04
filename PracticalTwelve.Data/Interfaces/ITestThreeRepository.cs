@@ -31,5 +31,19 @@ namespace PracticalTwelve.Data.Interfaces
         /// </summary>
         /// <returns></returns>
         Task<EmployeeInfo> GetEmployeeHavingMaxSalaryAsync();
+
+        /// <summary>
+        /// Insert new designation
+        /// </summary>
+        /// <param name="designation"></param>
+        /// <returns></returns>
+        Task<int> InsertDesignationAsync(string designation);
+
+        /// <summary>
+        /// Insert new employee
+        /// </summary>
+        /// <param name="employeeInfo">EmployeeInfo object</param>
+        /// <returns></returns>
+        Task<int> InsertEmployeeInfoAsync(EmployeeInfo employeeInfo);
     }
 }

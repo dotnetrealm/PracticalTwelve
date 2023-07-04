@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PracticalTwelve.Data.Interfaces;
+using PracticalTwelve.Data.Repositories;
 using PracticalTwelve.Domain.Entities;
 using PracticalTwelve.Domain.ViewModels;
 
@@ -39,6 +40,32 @@ namespace PracticalTwelve.Controllers
         {
             EmployeeInfo data = await _testThreeRepository.GetEmployeeHavingMaxSalaryAsync();
             return PartialView("_EmployeeInfoTable", data);
+        }
+
+        [HttpGet]
+        public async Task<JsonResult> InsertDesignation()
+        {
+            string designation = "NewDesignation_" + new Random().Next(1000, 9999);
+            int count = await _testThreeRepository.InsertDesignationAsync(designation);
+            return Json(new { Result = "OK", Count = count });
+        }
+
+        [HttpGet]
+        public async Task<JsonResult> InsertEmployeeInfo()
+        {
+            EmployeeInfo emp = new()
+            {
+                FirstName = "FN_Employee_" + new Random().Next(1000, 9999),
+                MiddleName = "MN_Employee_" + new Random().Next(1000, 9999),
+                LastName = "LN_Employee_" + new Random().Next(1000, 9999),
+                DOB = new DateTime(2000, 12, 01),
+                Address = "Rajkot",
+                MobileNumber = "1231231231",
+                Salary = 15000,
+                DesignationId = 1
+            };
+            int count = await _testThreeRepository.InsertEmployeeInfoAsync(emp);
+            return Json(new { Result = "OK", Count = count });
         }
     }
 }

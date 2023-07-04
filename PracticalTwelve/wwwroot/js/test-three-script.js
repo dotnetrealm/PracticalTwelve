@@ -58,4 +58,24 @@
         $("#DisplaySection").load(url);
         makeToast("Data loaded successfully.");
     });
+
+    $("#TestThreeActions #CreateNewDesignationBtn").on("click", () => {
+        let url = "TestThree/InsertDesignation";
+        $.ajax({
+            url: url,
+            success: (res) => {
+                makeToast("Designation inserted successfully.");
+            }
+        });
+    });
+
+    $("#TestThreeActions #CreateNewEmployeeBtn").on("click", () => {
+        let url = "TestThree/InsertEmployeeInfo";
+        $.ajax({
+            url: url,
+            success: (res) => {
+                makeToast("New employee inserted successfully.");
+            }
+        });
+    });
 })

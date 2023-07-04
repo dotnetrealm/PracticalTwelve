@@ -33,6 +33,16 @@ namespace PracticalTwelve.Controllers
         }
 
         /// <summary>
+        /// Return partial view for add new designation
+        /// </summary>
+        /// <returns>Partial View</returns>
+        public async Task<IActionResult> CreateDesignation()
+        {
+            IEnumerable<Employee> employees = await _testOneRepository.GetAllEmployeeAsync();
+            return PartialView("_CreateDesignation");
+        }
+
+        /// <summary>
         /// Insert single employee to DB
         /// </summary>
         /// <returns>View</returns>
