@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\TestThree\_CreateDesignation.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\TestThree\_CreateDesignation.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\PracticalTwelve.Data\PracticalTwelve.Data.csproj" />
   </ItemGroup>
 

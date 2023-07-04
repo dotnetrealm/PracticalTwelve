@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PracticalTwelve.Domain.ViewModels
 {
-    public class EmployeeDesignationDetails
+    public class EmployeeWithDesignation
     {
         public string FirstName { get; set; } = null!;
 
@@ -12,4 +12,6 @@ namespace PracticalTwelve.Domain.ViewModels
         public string LastName { get; set; } = null!;
         public string Designation { get; set; } = null!;
     }
+
+    
 }

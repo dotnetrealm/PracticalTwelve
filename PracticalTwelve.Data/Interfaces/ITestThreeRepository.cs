@@ -18,19 +18,13 @@ namespace PracticalTwelve.Data.Interfaces
         /// Returns list of FirstName, MiddleName, LastName and Designation of employee
         /// </summary>
         /// <returns></returns>
-        Task<IEnumerable<EmployeeDesignationDetails>> GetEmployeeDesignationDetailsAsync();
+        Task<IEnumerable<EmployeeWithDesignation>> GetEmployeeDesignationDetailsAsync();
 
         /// <summary>
-        /// Returns Designation names that have more than one employee
+        /// Returns employee details from view created in DB
         /// </summary>
         /// <returns></returns>
-        Task<List<string>> GetDesignationThatHaveMoreThanOneEmployeeAsync();
-
-        /// <summary>
-        /// Find the employee having maximum salary
-        /// </summary>
-        /// <returns></returns>
-        Task<EmployeeInfo> GetEmployeeHavingMaxSalaryAsync();
+        Task<IEnumerable<EmployeeDetails>> GetEmployeeDesignationDetailsUsingViewAsync();
 
         /// <summary>
         /// Insert new designation
@@ -45,5 +39,31 @@ namespace PracticalTwelve.Data.Interfaces
         /// <param name="employeeInfo">EmployeeInfo object</param>
         /// <returns></returns>
         Task<int> InsertEmployeeInfoAsync(EmployeeInfo employeeInfo);
+
+        /// <summary>
+        /// Returns Designation names that have more than one employee
+        /// </summary>
+        /// <returns></returns>
+        Task<List<string>> GetDesignationThatHaveMoreThanOneEmployeeAsync();
+
+        /// <summary>
+        /// Returns Users details from Store Procedure
+        /// </summary>
+        /// <returns></returns>
+        Task<IEnumerable<EmployeeDetails>> GetEmployeeDetailsUsingSPAsync();
+
+        /// <summary>
+        /// Returns Users details from Store Procedure
+        /// </summary>
+        /// <returns></returns>
+        Task<IEnumerable<EmployeeInfo>> GetEmployeeDetailsByDesignationIdUsingSPAsync(int designationId);
+
+        /// <summary>
+        /// Find the employee having maximum salary
+        /// </summary>
+        /// <returns></returns>
+        Task<EmployeeInfo> GetEmployeeHavingMaxSalaryAsync();
+
+        
     }
 }

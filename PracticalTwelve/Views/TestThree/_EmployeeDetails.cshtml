@@ -1,0 +1,33 @@
+﻿@using PracticalTwelve.Domain.Entities;
+@using PracticalTwelve.Domain.ViewModels;
+@model EmployeeDetails;
+
+<table class="table text-center" id="EmployeeCountByDesignationDataTable">
+    <thead>
+        <tr>
+            <th scope="col"><label asp-for="EmployeeInfo.Id"></label></th>
+            <th scope="col"><label asp-for="EmployeeInfo.FirstName"></label></th>
+            <th scope="col"><label asp-for="EmployeeInfo.MiddleName"></label></th>
+            <th scope="col"><label asp-for="EmployeeInfo.LastName"></label></th>
+            <th scope="col"><label asp-for="Designation"></label></th>
+            <th scope="col"><label asp-for="EmployeeInfo.DOB"></label></th>
+            <th scope="col"><label asp-for="EmployeeInfo.MobileNumber"></label></th>
+            <th scope="col"><label asp-for="EmployeeInfo.Address"></label></th>
+            <th scope="col"><label asp-for="EmployeeInfo.Salary"></label></th>
+        </tr>
+    </thead>
+    <tbody class="text-center">
+        @*displays data*@
+        <tr>
+            <th scope="row">@Html.DisplayFor(e => e.EmployeeInfo.Id)</th>
+            <td>@Html.DisplayFor(e => e.EmployeeInfo.FirstName)</td>
+            <td>@Html.DisplayFor(e => e.EmployeeInfo.MiddleName)</td>
+            <td>@Html.DisplayFor(e => e.EmployeeInfo.LastName)</td>
+            <td>@Html.DisplayFor(e => e.Designation)</td>
+            <td>@Html.DisplayFor(e => e.EmployeeInfo.DOB)</td>
+            <td>@Html.DisplayFor(e => e.EmployeeInfo.MobileNumber)</td>
+            <td>@Html.DisplayFor(e => e.EmployeeInfo.Address)</td>
+            <td>@Html.DisplayFor(e => e.EmployeeInfo.Salary)</td>
+        </tr>
+    </tbody>
+</table>

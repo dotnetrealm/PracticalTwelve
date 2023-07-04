@@ -1,0 +1,17 @@
+﻿@model string
+
+<form class="py-3 mb-3" id="CreateEmployeeForm">
+    <h4 class="text-decoration-underline mb-4">Create Designation</h4>
+    <div id="ValidationSummary" class="alert alert-danger d-none" role="alert"></div>
+    <div class="row">
+        <div class="col-md-3 pr-5">
+            @Html.LabelFor(model => model, htmlAttributes: new { @class = "form-label required" })
+            <div class="input-group mb-2">
+                @Html.EditorFor(model => model, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <div class="col-md-2 align-self-end mobile-margin">
+            <button type="submit" class="btn btn-outline-dark">Create Designation</button>
+        </div>
+    </div>
+</form>
