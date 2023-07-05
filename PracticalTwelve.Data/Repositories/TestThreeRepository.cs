@@ -11,11 +11,7 @@ namespace PracticalTwelve.Data.Repositories
 {
     public class TestThreeRepository : ITestThreeRepository
     {
-<<<<<<< Updated upstream
-        public const string ConnectionString = "Data Source=.;Initial Catalog=EmployeeDB;Persist Security Info=True;User ID=CTO;Password=CTO@123";
-=======
         public const string ConnectionString = "Data Source=.;Initial Catalog=EmployeeDB;Persist Security Info=True;User ID=CTO;Password=CTO@123;TrustServerCertificate=True";
->>>>>>> Stashed changes
 
         public readonly SqlConnection _connection;
 
